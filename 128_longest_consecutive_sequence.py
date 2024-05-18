@@ -3,7 +3,7 @@ class Solution:
         n_set = set(nums)
 
         max_len = 0
-        for num in nums:
+        for num in n_set:
             if num - 1 in n_set:
                 continue # not start of seq
             curr_num = num
