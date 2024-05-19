@@ -12,9 +12,7 @@ class Solution:
                 if matrix[r][c] == 0:
                     zero_rows.add(r)
                     zero_cols.add(c)
-        for r in zero_rows:
-            for c in range(n_cols):
-                matrix[r][c] = 0
         for r in range(n_rows):
-            for c in zero_cols:
-                matrix[r][c] = 0
+            for c in range(n_cols):
+                if r in zero_rows or c in zero_cols:
+                    matrix[r][c] = 0
